@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ASEL STORE - Sosmed & Payment</title>
+
+  <!-- Meta canonical / open graph menunjuk domain baru -->
+  <link rel="canonical" href="https://aselstoreinfo.com/">
+  <meta property="og:site_name" content="Asel Store">
+  <meta property="og:url" content="https://aselstoreinfo.com/">
+
+  <!-- Font horor -->
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nosifer&family=Metal+Mania&display=swap" rel="stylesheet">
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%;font-family:'Creepster',cursive;background:#000}
+    /* Background */
+    .bg{
+      position:fixed; inset:0;
+      background-image: url('bg.jpg'); /* ganti dengan nama file gambar kamu */
+      background-size: cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      filter: contrast(1.05) saturate(1.08);
+      z-index:-2;
+    }
+    .overlay{
+      position:fixed; inset:0;
+      background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65));
+      z-index:-1;
+    }
+
+    .wrap{
+      min-height:100vh;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:24px;
+      padding:32px 16px;
+    }
+
+    .card{
+      width:100%;
+      max-width:920px;
+      background: rgba(0,0,0,0.42);
+      border-radius:16px;
+      padding:22px;
+      border: 2px solid rgba(255,30,0,0.45);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.7), 0 0 40px rgba(255,60,0,0.08) inset;
+      backdrop-filter: blur(4px);
+      text-align:center;
+    }
+
+    h1.title{
+      font-size: clamp(30px,5.5vw,56px);
+      color:#ffcc00;
+      text-transform:uppercase;
+      letter-spacing:1px;
+      margin-bottom:6px;
+      text-shadow:
+        0 0 8px rgba(255,120,0,0.9),
+        0 0 20px rgba(255,50,0,0.8),
+        0 8px 24px rgba(0,0,0,0.6);
+      -webkit-text-stroke: 2px #190700;
+      animation: flicker 1.6s infinite alternate;
+    }
+
+    @keyframes flicker{
+      from{ transform:translateY(0); text-shadow: 0 0 8px rgba(255,120,0,1), 0 0 20px rgba(255,50,0,0.8); }
+      to{ transform:translateY(-2px); text-shadow: 0 0 18px rgba(255,200,0,1), 0 0 36px rgba(255,60,0,0.9); }
+    }
+
+    .line{
+      width:80%;
+      height:4px;
+      margin:18px auto;
+      background: linear-gradient(90deg, #ff2d2d, #ff9a00, #ff2d2d);
+      border-radius:3px;
+      box-shadow:0 0 20px rgba(255,60,0,0.25);
+    }
+
+    .item{
+      font-size: clamp(14px,2.2vw,20px);
+      color:#fff;
+      margin:8px 0;
+      font-family:'Metal Mania',cursive;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    }
+
+    .label{
+      color:#ffd98a;
+      font-family:'Nosifer',cursive;
+      font-weight:700;
+      margin-right:6px;
+    }
+
+    .note{
+      margin-top:12px;
+      background: linear-gradient(90deg, rgba(160,0,0,0.9), rgba(240,40,0,0.9));
+      padding:10px 12px;
+      border-radius:8px;
+      color:#fff;
+      font-weight:800;
+      -webkit-text-stroke:0.6px #330000;
+      box-shadow: 0 8px 30px rgba(200,20,0,0.25);
+      font-size: clamp(13px,2vw,18px);
+    }
+
+    /* Tombol link */
+    .visit {
+      margin-top:14px;
+      display:inline-block;
+      text-decoration:none;
+      padding:12px 20px;
+      border-radius:12px;
+      background: linear-gradient(180deg,#ff7a00,#ff2400);
+      color:#fff;
+      font-weight:800;
+      box-shadow: 0 10px 30px rgba(255,60,0,0.25);
+      border:2px solid rgba(0,0,0,0.25);
+      transition: transform .15s ease, box-shadow .15s ease;
+      font-size:18px;
+    }
+    .visit:hover{ transform:translateY(-4px); box-shadow: 0 18px 40px rgba(255,80,0,0.35); }
+
+    .foot{ margin-top:12px; font-size:12px; color:rgba(255,255,255,0.85); opacity:0.9 }
+
+    @media(max-width:520px){
+      .card{ padding:16px }
+      h1.title{ font-size:36px }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="overlay" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <!-- SOSMED -->
+    <section class="card">
+      <h1 class="title">ALL SOSMEDS ASEL STORE</h1>
+      <div class="item"><span class="label">INSTAGRAM :</span> ASEL_STORE01</div>
+      <div class="item"><span class="label">TIKTOK :</span> asel_str</div>
+      <div class="item"><span class="label">WHATSAPP :</span> +6285753670391</div>
+      <div class="note">HATI-HATI CLONE — YANG REAL HANYA YANG DI ATAS</div>
+      <div class="foot">© ASEL STORE</div>
+    </section>
+
+    <div class="line"></div>
+
+    <!-- PAYMENT -->
+    <section class="card">
+      <h1 class="title">ALL PAYMENT ASEL</h1>
+      <div class="item"><span class="label">DANA :</span> 085787301365</div>
+      <div class="item"><span class="label">GOPAY :</span> 085787301365</div>
+      <div class="item"><span class="label">QRIS :</span> MINTA AJA — ADA TAMBAHAN FEE 500P</div>
+      <div class="note">NOTE: SERTAKAN BUKTI TF NYA</div>
+
+      <!-- Tombol menuju domain baru -->
+      <div style="margin-top:18px;">
+        <a class="visit" href="https://aselstoreinfo.com/" target="_blank" rel="noopener noreferrer">
+          MASUK KE WEB: aselstoreinfo.com
+        </a>
+      </div>
+
+      <div class="foot">Jika ingin domain benar-benar aktif, daftarkan & hosting domain .com kamu.</div>
+    </section>
+  </div>
+
+</body>
+</html>
